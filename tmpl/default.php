@@ -16,7 +16,7 @@ $document = JFactory::getDocument();
 $document->addStyleSheet('media/mod_th_states/css/mod_th_states.css');
 $document->addScript('media/mod_th_states/js/jquery.ThreeDots.min.js');
 $document->addScriptDeclaration('
-jQuery(document).ready(function($){
+jQuery(document).ready(function(){
     jQuery(window).on("resize", function () {
 
     var w = jQuery("[id^=th-state-image]").outerWidth(true);
@@ -33,6 +33,8 @@ jQuery(document).ready(function($){
 $rowCount = (int) $params->get('rowcount', 2);
 $itemRow = (int) $params->get('itemrow', 2);
 $itemWidth = (int) $params->get('itemwidth', 47);
+$listArticles = explode(",",$params->get('idArticle', 0));
+$idArticle = 0;
 ?>
 <?php /* Falta agregar y probar el uso de la clase que el usuario pasa por parametro */ ?>
 <div class="mod_th_states">
@@ -49,8 +51,19 @@ $itemWidth = (int) $params->get('itemwidth', 47);
 				if (isset($list[$count])):
 					$item = $list[$count];
 			?>
-			<div class="state-item" style="width: <?php echo $itemWidth; ?>%;">
-				<div id="th-state-image-<?php echo $count;?>" class="state-image">
+			<?php 
+					if (isset($listArticles[$count + $offset ]) && $listArticles[$count + $offset] != " "): 
+			?>
+			<a href="index.php?option=com_content&view=article&id=<?php echo $listArticles[$count + $offset]; ?>&id_country=<?php echo $item->id; ?>">
+			<?php 
+					else: 
+			?>
+			<a href="#">
+			<?php 
+					endif; 
+			?>
+			<div class="country-item" style="width: <?php echo $itemWidth; ?>%;">
+				<div id="th-country-image-<?php echo $count;?>" class="country-image">
 					<img src="<?php echo $item->image?>">
 				</div>
 				<div id="th-state-text-<?php echo $count;?>" class="state-text">
