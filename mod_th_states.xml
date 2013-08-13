@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Thor Hospedaje States</name>
+	<author>Leonardo Alviarez, Edén Arreaza</author>
+	<creationDate>July 2013</creationDate>
+	<copyright>Copyright (C) 2013. All rights reserved.</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<authorEmail>alviarez.leonardo@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>0.0.5</version>
+	<description>MOD_TH_STATES_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_th_states">mod_th_states.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_th_states.xml</filename>
+	</files>
+	<media folder="media" destination="mod_th_states">
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+	<languages>
+		<language tag="es-ES">language/es-ES/es-ES.mod_th_states.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.mod_th_states.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_WEBLINKS" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="mod_th_states_description"
+					type="textarea"
+					class="inputbox" 
+					rows="3" 
+					cols="30"
+					label="MOD_TH_STATES_FIELD_DESC_LABEL"
+					description="MOD_TH_STATES_FIELD_DESC_DESC" />
+				<field
+					name="rowcount"
+					type="text"
+					default="2"
+					label="MOD_TH_STATES_FIELD_ROWCOUNT_LABEL"
+					description="MOD_TH_STATES_FIELD_ROWCOUNT_DESC" />
+				<field
+					name="itemrow"
+					type="text"
+					default="2"
+					label="MOD_TH_STATES_FIELD_ITEMROW_LABEL"
+					description="MOD_TH_STATES_FIELD_ITEMROW_DESC" />
+				<field
+					name="itemwidth"
+					type="text"
+					default="47"
+					label="MOD_TH_STATES_FIELD_ITEMWIDTH_LABEL"
+					description="MOD_TH_STATES_FIELD_ITEMWIDTH_DESC" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,61 @@
+.mod_th_countries{
+
+}
+
+.mod_th_states .row-fluid{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.state-item{
+	border: 1px solid #CCCCCC;
+	float: left;
+	height: auto;
+	/*width: 47%;*/
+	margin: 2px;
+	padding: 5px;
+	border-radius: 4px 4px 4px 4px;
+	background: none repeat scroll 0 0 #F9F9F9;
+	
+}
+
+.state-item:hover{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AAAAAA;
+    box-shadow: 0 0 10px #999999;
+    transition: all 0.5s ease 0s;
+}
+
+.state-image{
+	float: left;
+	height: auto;
+	margin-right: 2px;
+	width: 50%;
+}
+
+.state-image > img{
+	height: auto;
+	width: 100%;	
+}
+
+.state-text{
+	width: auto;
+	font-size: 0.9em;
+	/*overflow: hidden;
+	text-overflow: ellipsis;*/
+}
+/*
+.state-text > p{
+	margin: 0;
+}*/
+
+.state-text > h1{
+	font-size: 1.1em;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;	
+}
+
+.mod_th_state .row-fluid > p{
+	margin: 0 0 10px;
+}
